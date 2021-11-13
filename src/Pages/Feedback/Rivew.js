@@ -8,7 +8,7 @@ import Rivews from './Rivews'
 const Rivew = () => {
     const [feedbakcs, setFeedbakcs] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://salty-taiga-73343.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => {
                 setFeedbakcs(data)

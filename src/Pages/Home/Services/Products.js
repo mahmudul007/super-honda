@@ -16,7 +16,7 @@ const Products = () => {
 
     //find all products
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://salty-taiga-73343.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setServices(data.slice(0, 6));

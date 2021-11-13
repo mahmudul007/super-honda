@@ -12,7 +12,7 @@ import { Button } from '@mui/material';
 const Manageproducts = () => {
     const [manageproducts, setManageproducts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://salty-taiga-73343.herokuapp.com/products')
             .then(res => res.json())
             .then(data => {
                 setManageproducts(data);
@@ -24,7 +24,7 @@ const Manageproducts = () => {
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/products/${id}`;
+        const url = `https://salty-taiga-73343.herokuapp.com/products/${id}`;
         fetch(url,
             {
                 method: 'DELETE'

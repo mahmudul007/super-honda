@@ -26,7 +26,7 @@ const Order = () => {
 
     //
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${serviceId}`)
+        fetch(`https://salty-taiga-73343.herokuapp.com/products/${serviceId}`)
             .then(res => res.json())
             .then(data => {
                 setDetails(data)
@@ -38,7 +38,7 @@ const Order = () => {
 
 
         console.log(data);
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://salty-taiga-73343.herokuapp.com/orders', data)
             .then(res => {
 
                 if (res.data.insertedId) {

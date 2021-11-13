@@ -16,7 +16,7 @@ const Manageallorders = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://salty-taiga-73343.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => {
                 setManageorders(data);
@@ -28,7 +28,7 @@ const Manageallorders = () => {
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://salty-taiga-73343.herokuapp.com/orders/${id}`;
         fetch(url,
             {
                 method: 'DELETE'

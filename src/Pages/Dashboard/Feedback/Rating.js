@@ -12,7 +12,7 @@ const Rating = () => {
     const { user } = useAuth();
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/reviews', data)
+        axios.post('https://salty-taiga-73343.herokuapp.com/reviews', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('rivew given succesfully');
