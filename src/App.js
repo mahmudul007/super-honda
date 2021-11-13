@@ -17,6 +17,7 @@ import Rivew from './Pages/Feedback/Rivew';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './Pages/About/About';
 import Helmets from './Pages/Home/Helmet/Helmets';
+import Error from './Pages/Error/Error';
 
 
 
@@ -61,6 +62,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About></About>
+            </Route>
+            <Route path="*">
+              <Error></Error>
             </Route>
 
 
