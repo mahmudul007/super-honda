@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import { Container } from '@mui/material';
 import Rivews from './Rivews'
 
+
+
 const Rivew = () => {
     const [feedbakcs, setFeedbakcs] = useState([]);
     useEffect(() => {
@@ -16,6 +18,8 @@ const Rivew = () => {
                 console.log(data)
             })
     }, [])
+
+
 
     return (
         <Box sx={{ flexGrow: 1, bgcolor: '#e6ffff' }}>

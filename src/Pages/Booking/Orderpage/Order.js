@@ -18,7 +18,7 @@ import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 
 
-const Order = () => {
+const Order = ({ props }) => {
     const { serviceId } = useParams();
     const { user } = useAuth();
     const [details, setDetails] = useState({});
@@ -61,7 +61,7 @@ const Order = () => {
                     <Grid item xs={6}>
                         <Card >
 
-                            <img style={{ width: '80%', height: '100%' }} src={img1} alt="" />
+                            <img style={{ width: '80%', height: '100%' }} src={details.imag} alt="" />
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {details.name}

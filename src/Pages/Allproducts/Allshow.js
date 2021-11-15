@@ -6,9 +6,10 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Grid } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Allshow = (props) => {
-    const { name, description, price, imag } = props.service;
+    const { _id, name, description, imag, price } = props.service;
     return (
         <Grid item xs={4} sm={4} md={4}>
             <Card sx={{ minWidth: 275, border: 0, boxShadow: 2 }}>
@@ -26,7 +27,7 @@ const Allshow = (props) => {
                         {description}
                     </Typography>
                 </CardContent>
-                <Button variant="contained">Buy Now</Button>
+                <Link to={`/order/${_id}`} style={{ textDecoration: 'none' }}>  <Button sx={{ m: 2 }} variant="contained">Buy Now</Button></Link>
             </Card>
         </Grid>
 
